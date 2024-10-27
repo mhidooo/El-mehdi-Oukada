@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mon profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h1>El mehdi</h1>   
+ <section>
+    <h2> a propos de moi</h2>
+    <p>salut, je suis El mehdi Oukada, etudiant en cycle d'ingenieurie informagique, j'ai choisi cette filiere car j'aime ce domaine,en dehorhs de ca, j'aime aussi pratiquer du sport et regarder les matchs de foot.</p>
+</section>
+<section>
+    <h2>Hobbies et Objectifs</h2>
+    <h3>Mes Hobbies</h3>
+    <ul>
+        <li>faire du sport</li>
+        <li>Voyages</li>
+        <li>regarder des matchs</li>
+        <li>Musique</li>
+    </ul>
+    <h3>Objectifs pour cette année</h3>
+    <ol>
+        <li>Apprendre une nouvelle langue</li>
+        <li>Améliorer mes compétences en programmation</li>
+        <li>passer un stage</li>
+        <li>avoir des connaissances professionnelles</li>
+    </ol>
+</section>
+<section>
+    <h2>Tableau d'Amis</h2>
+    <table border="1">
+        <tr>
+            <th>Nom</th>
+            <th>Âge</th>
+            <th>Ville</th>
+            <th>Profil</th>
+        </tr>
+        <tr>
+            <td>taha</td>
+            <td>20</td>
+            <td>casablanca</td>
+            <td><a href="https://profil-ami1.com" target="_blank">Voir Profil</a></td>
+        </tr>
+        <tr>
+            <td>mohamed</td>
+            <td>21</td>
+            <td>nador</td>
+            <td><a href="https://profil-ami2.com" target="_blank">Voir Profil</a></td>
+        </tr>
+        <tr>
+            <td>younes</td>
+            <td>22</td>
+            <td>settat</td>
+            <td><a href="https://profil-ami3.com" target="_blank">Voir Profil</a></td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>Formulaire de Contact</h2>
+    <form action="traitement_formulaire.php" method="post">
+    
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
+         
+       
+        
+        <button type="submit">envoyer</button>
+        
+    </form>
+</section>
+<script>
+    function validerFormulaire() {
+        
+        const nom = document.getElementById("nom").value;
+        if (nom === "") {
+            alert("Erreur : Veuillez entrer votre nom.");
+            return false;
+        }
+
+        const email = document.getElementById("email").value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert("Erreur : Veuillez entrer une adresse email valide.");
+            return false;
+        }
+
+       
+        alert("Succès : Le formulaire a été soumis avec succès !");
+        return true;
+    }
+</script>
+</body>
+</html>
